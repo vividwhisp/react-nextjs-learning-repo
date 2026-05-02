@@ -13,19 +13,26 @@
     <script type="text/jsx"> 
         const domNode = document.getElementById('app');
 
-        function Header(){
-            return <h1>Develop  Preview. Ship</h1>;
+        function Header({ title }){
+            console.log(title);
+            return <h1>{title ? title : 'Default Title'}</h1>;
         }
 
         function HomePage(){
+            const names = ["Ada", "Grace", "Margaret hamilton"];
             return (
                 <div>
-                <Header />
-                <Header />
+                <Header title="Reacttt" />
+                <Header title="New" />
+                <ul>
+                    {names.map((name) => (
+                        <li key={name}> {name} </li>
+                    ))}
+                </ul>
                 </div>
 
-            )
-                        }
+            );
+        }
 
         const root = ReactDOM.createRoot(domNode);
 
