@@ -1,4 +1,5 @@
 import LikeButton from './like-button';
+import MyApp  from './new-butto';
 
 function Header({ title }) {
   return <h1>{title ? title : 'Default title'}</h1>;
@@ -17,6 +18,7 @@ export default function HomePage() {
         ))}
       </ul>
       <LikeButton />
+      <MyApp />
     </div>
   );
 
